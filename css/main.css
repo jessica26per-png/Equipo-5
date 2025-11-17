@@ -6,6 +6,13 @@
     /* Verde para éxito/CTA */
     --text-color: #333;
     --bg-light: #f4f4f4;
+    /*Footer*/
+    --sf-bg: #0b1220;         
+  --sf-contrast: #ffffff;    
+  --sf-muted: #bfc9d6;     
+  --sf-accent: #00aaff;      
+  --sf-gap: 1rem;
+  --sf-max-width: 1200px;
 }
 
 body {
@@ -214,4 +221,159 @@ nav a:hover {
     .service-item {
         flex-basis: 100%;
     }
+}
+
+/*Footer*/
+.sf-footer {
+  background: var(--sf-bg);
+  color: var(--sf-contrast);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  padding: 2rem 1rem;
+}
+
+/* Contenedor central */
+.sf-container {
+  max-width: var(--sf-max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+/* Marca */
+.sf-brand {
+  min-width: 200px;
+  flex: 1 1 220px;
+}
+.sf-logo {
+  margin: 0;
+  font-size: 1.4rem;
+  letter-spacing: 0.6px;
+}
+.sf-tagline {
+  margin: 0.25rem 0 0;
+  color: var(--sf-muted);
+  font-size: 0.95rem;
+}
+
+/* Contacto, enlaces y social comparten estilo de columnas */
+.sf-contact,
+.sf-links,
+.sf-social {
+  flex: 1 1 180px;
+  min-width: 160px;
+}
+
+/* Encabezados de sección */
+.sf-heading {
+  margin: 0 0 0.6rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Listas */
+.sf-contact-list,
+.sf-links-list,
+.sf-social-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Contacto */
+.sf-contact-item {
+  margin-bottom: 0.45rem;
+  color: var(--sf-muted);
+  font-size: 0.95rem;
+}
+.sf-contact-link {
+  color: var(--sf-contrast);
+  text-decoration: none;
+  margin-left: 0.35rem;
+}
+.sf-contact-link:focus,
+.sf-contact-link:hover {
+  text-decoration: underline;
+  color: var(--sf-accent);
+}
+
+/* Enlaces rápidos */
+.sf-links-list li {
+  margin-bottom: 0.45rem;
+}
+.sf-link {
+  color: var(--sf-muted);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+.sf-link:hover,
+.sf-link:focus {
+  color: var(--sf-accent);
+  text-decoration: underline;
+}
+
+/* Redes sociales - íconos */
+.sf-social-list {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  margin-top: 0.3rem;
+}
+.sf-social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background: transparent;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform 120ms ease, background 120ms ease;
+  outline: none;
+}
+.sf-social-link:focus {
+  box-shadow: 0 0 0 3px rgba(0,170,255,0.18);
+  border-radius: 8px;
+}
+.sf-social-link:hover {
+  transform: translateY(-4px);
+}
+
+/* Iconos SVG */
+.sf-icon {
+  width: 22px;
+  height: 22px;
+  fill: var(--sf-contrast);
+  display: block;
+}
+.sf-social-link:hover .sf-icon {
+  fill: var(--sf-accent);
+}
+
+/* Línea legal inferior */
+.sf-legal {
+  border-top: 1px solid rgba(255,255,255,0.05);
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  text-align: center;
+}
+.sf-legal-text {
+  margin: 0;
+  color: var(--sf-muted);
+  font-size: 0.9rem;
+}
+
+/* Responsive: columnas a una sola en pantallas pequeñas */
+@media (max-width: 720px) {
+  .sf-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .sf-brand { order: 0; }
+  .sf-contact { order: 1; }
+  .sf-links { order: 2; }
+  .sf-social { order: 3; }
+  .sf-social-list { justify-content: flex-start; }
 }
