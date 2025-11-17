@@ -1,9 +1,6 @@
-/* Estilos Globales */
 :root {
     --primary-color: #007bff;
-    /* Azul vibrante */
     --secondary-color: #28a745;
-    /* Verde para éxito/CTA */
     --text-color: #333;
     --bg-light: #f4f4f4;
 }
@@ -45,10 +42,8 @@ nav a:hover {
     color: var(--primary-color);
 }
 
-/* HERO SECTION (Diseño Atractivo) */
 .hero {
     background: url('../assets/licensed-image.jpg') no-repeat center center/cover;
-    /* Usar una imagen de fondo */
     height: 400px;
     display: flex;
     align-items: center;
@@ -56,7 +51,6 @@ nav a:hover {
     text-align: center;
     color: white;
     position: relative;
-    /* Efecto de sombra para que el texto sea legible */
     box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.4);
 }
 
@@ -80,10 +74,8 @@ nav a:hover {
 .cta-button:hover {
     background-color: #1e7e34;
     transform: translateY(-2px);
-    /* Transición/Animación sutil */
 }
 
-/* PRODUCT SHOWCASE (Responsive Design con Grid) */
 .product-showcase,
 .services {
     padding: 50px 5%;
@@ -92,7 +84,6 @@ nav a:hover {
 
 .product-grid {
     display: grid;
-    /* 💡 Clave para Responsiveness: Crea tantas columnas de 250px como quepan */
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
     margin-top: 30px;
@@ -105,13 +96,11 @@ nav a:hover {
     overflow: hidden;
     padding-bottom: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    /* Transición para la animación de hover */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .product-card:hover {
     transform: translateY(-5px);
-    /* Animación: Levanta la tarjeta */
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -149,7 +138,6 @@ nav a:hover {
     background-color: #0056b3;
 }
 
-/* SECCIÓN SERVICIOS */
 .services {
     background-color: var(--bg-light);
 }
@@ -169,30 +157,25 @@ nav a:hover {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
-/* ANIMACIÓN Y CONFIRMACIÓN JS */
 .confirmation-message {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: var(--secondary-color);
-    /* Fondo Verde */
     color: white;
     padding: 15px 30px;
     border-radius: 8px;
     font-weight: 600;
     z-index: 1000;
     opacity: 0;
-    /* Por defecto invisible */
     transition: opacity 0.5s ease;
 }
 
 .confirmation-message.show {
     opacity: 1;
-    /* Visible cuando JS añade la clase 'show' */
 }
 
-/* MEDIA QUERIES (Ajustes para pantallas pequeñas) */
 @media (max-width: 768px) {
     .main-header {
         flex-direction: column;
@@ -208,7 +191,6 @@ nav a:hover {
 
     .service-grid {
         flex-direction: column;
-        /* Apila los servicios en móviles */
     }
 
     .service-item {
