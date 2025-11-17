@@ -215,3 +215,7 @@ nav a:hover {
         flex-basis: 100%;
     }
 }
+
+#formularioContacto{
+width: 60%;
+}
