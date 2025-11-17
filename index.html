@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generación | SportFlow Landing Page</title>
+    <link rel="stylesheet" href="./css/main.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="logo">SportFlow</div>
+        <nav>
+            <a href="#productos">Productos</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#">Contacto</a>
+        </nav>
+        <div class="cart-icon">
+            Carrito (<span id="cart-count">0</span>)
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Supera tus Límites con SportFlow</h1>
+                <p>La colección de alto rendimiento que redefine el deporte.</p>
+                <a href="#productos" class="cta-button">¡Explora Ahora!</a>
+            </div>
+        </section>
+
+        <section id="productos" class="product-showcase">
+            <h2>Productos Destacados</h2>
+
+            <div class="product-grid">
+
+                <div class="product-card" data-product-id="1">
+                    <img src="assets/" alt="Zapato de Running">
+                    <div class="product-info">
+                        <h3>Zapato Velocity X</h3>
+                        <p class="price">$129.99</p>
+                        <button class="add-btn" onclick="addToCart(1, 'Zapato Velocity X')">
+                            Añadir al Carrito
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-product-id="2">
+                    <img src="assets/tshirt.jpg" alt="Camiseta Dry-Fit">
+                    <div class="product-info">
+                        <h3>Camiseta Core Dry</h3>
+                        <p class="price">$39.50</p>
+                        <button class="add-btn" onclick="addToCart(2, 'Camiseta Core Dry')">
+                            Añadir al Carrito
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-product-id="3">
+                    <img src="assets/band.jpg" alt="Banda de Resistencia">
+                    <div class="product-info">
+                        <h3>Banda Max Strength</h3>
+                        <p class="price">$19.99</p>
+                        <button class="add-btn" onclick="addToCart(3, 'Banda Max Strength')">
+                            Añadir al Carrito
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-product-id="4">
+                    <img src="assets/bag.jpg" alt="Mochila Deportiva">
+                    <div class="product-info">
+                        <h3>Mochila ProPack</h3>
+                        <p class="price">$55.00</p>
+                        <button class="add-btn" onclick="addToCart(4, 'Mochila ProPack')">
+                            Añadir al Carrito
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="servicios" class="services">
+            <h2>Servicios Exclusivos</h2>
+            <div class="service-grid">
+                <div class="service-item">
+                    <h3>Envío Ultra Rápido</h3>
+                    <p>Recibe tu equipo en 24 horas, garantizado.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Devoluciones Simples</h3>
+                    <p>30 días para cambio o reembolso sin complicaciones.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Asesoría Virtual</h3>
+                    <p>Conecta con expertos deportivos para guías de compra.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 SportFlow. Todos los derechos reservados.</p>
+    </footer>
+
+    <div id="confirmation-message" class="confirmation-message"></div>
+
+    <script src="./js/main.js"></script>
+</body>
+
+
+</html>
