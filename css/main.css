@@ -47,7 +47,7 @@ nav a:hover {
 
 /* HERO SECTION (Diseño Atractivo) */
 .hero {
-    background: url('assets/hero-bg.jpg') no-repeat center center/cover;
+    background: url('../assets/licensed-image.jpg') no-repeat center center/cover;
     /* Usar una imagen de fondo */
     height: 400px;
     display: flex;
