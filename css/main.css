@@ -359,3 +359,8 @@ nav a:hover {
   .sf-social { order: 3; }
   .sf-social-list { justify-content: flex-start; }
 }
+
+
+#formularioContacto{
+width: 60%;
+}
